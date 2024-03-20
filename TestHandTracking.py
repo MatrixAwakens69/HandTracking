@@ -10,9 +10,9 @@ currTime = 0
 
 while True:
     success, img = cap.read()
-    img = detector.findHands(img, draw = False)
-    lmList = detector.findPosition(img, draw = False)
-    if len(lmList) != 0:
+    img = detector.findHands(img, draw=False)
+    lmList = detector.findPosition(img, draw=False)
+    if len(lmList) > 0:
         print(lmList[8])
 
     currTime = time.time()
